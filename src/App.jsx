@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { loadPlaylistFromIndexedDB, savePlaylistToIndexedDB } from "./db";
 import "./App.css";
+import "./styles/progressbar.css";
 import TrackList from "./components/TrackList";
 import ProgressBar from "./components/ProgressBar";
 import Controls from "./components/Controls";
@@ -96,6 +97,8 @@ const App = () => {
         }}
       />
       <Controls
+        isPlaying={isPlaying}
+        setIsPlaying={setIsPlaying}
         setVolume={setVolume}
         volume={volume}
         audioRef={audioRef}

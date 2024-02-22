@@ -1,4 +1,3 @@
-import "./progressbar.css";
 function formatTime(time) {
   const min = Math.floor(time / 60);
   const sec = Math.floor(time - min * 60);
@@ -9,12 +8,12 @@ const ProgressBar = ({
   audioRef,
   duration,
   currentProgress,
-  onChange,
+
   ...rest
 }) => {
   return (
     <div className="progress">
-      <span className="time current">{formatTime(currentProgress)}</span>
+      <span className="time">{formatTime(currentProgress)}</span>
       <input
         type="range"
         // ref={progressBarRef}

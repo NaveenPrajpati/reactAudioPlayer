@@ -101,7 +101,8 @@ button svg {
 
 /* time */
 .time {
-  color: #333;
+  color: black;
+  font-weight: 700;
   font-size: 13px;
   line-height: 46px;
 }

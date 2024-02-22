@@ -14,9 +14,8 @@ import { IoMdVolumeHigh, IoMdVolumeOff, IoMdVolumeLow } from "react-icons/io";
 
 const Controls = ({
   audioRef,
-  // progressBarRef,
-  // duration,
-  // setTimeProgress,
+  isPlaying,
+  setIsPlaying,
   setVolume,
   volume,
   playlist,
@@ -24,7 +23,6 @@ const Controls = ({
   setCurrentTrackIndex,
   handleTrackEnded,
 }) => {
-  const [isPlaying, setIsPlaying] = useState(false);
   const [muteVolume, setMuteVolume] = useState(false);
 
   const togglePlayPause = () => {
@@ -130,9 +128,6 @@ const Controls = ({
           max={1}
           value={volume}
           onChange={handleVolumeChange}
-          style={{
-            background: `linear-gradient(to right, #f50 ${volume}%, #ccc ${volume}%)`,
-          }}
         />
       </div>
     </div>
